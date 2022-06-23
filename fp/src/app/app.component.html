@@ -1,8 +1,88 @@
-<h1>
+<!-- <h1>
   {{title}}
 </h1>
 
 <h3>i in {{count()}}</h3>
-<app-registration>
+<app-registration> -->
   
-</app-registration>
+<!-- </app-registration>  -->
+<app-login ></app-login>
+
+<!-- <button (click)="aler1('mileen')">click</button> -->
+<br><br>
+<!-- <input type="text" (onblur)="aler1(ev1.value)" #ev1 placeholder="on change" > -->
+<br><br>
+<input type="text" placeholder="onchange event" #ev (keydown)="eventshow(ev.value) ">
+
+<br><br><br>
+
+<input type="text" placeholder="enter name" #ts>
+<button (click)="tsdata(ts.value)">click to print</button>
+<br><br><br>
+<h3>Box name is:{{ipvalue}}</h3>
+<br><br><br><br>
+<h1>Counter</h1>
+<br>
+<button (click)="counter('+1')" >+1</button><button (click)="counter('-1')">-1</button>
+<h1> counter value:{{count}}</h1>
+
+
+<br><br><br>
+<h1>property binding</h1>
+<input type="text" [disabled]="name">
+<button (click)="pbinding(name)">click to disable</button>
+
+
+<br><br><br>
+<h1>if else condition </h1>
+<h3 *ngIf="color==true; then ifblock else elseblock"></h3>
+<ng-template #ifblock>
+  <h3 style="color: red;" >color on </h3>
+</ng-template>
+<ng-template #elseblock>
+  <h3  >color off </h3>
+</ng-template>
+
+<button (click)="ifcon(color)">on/off</button>
+
+<br><br><br>
+<h1>multiple if condition</h1>
+
+<ng-template [ngIf]="ip=='red'">
+  <h3 style="color: red">color red</h3>
+</ng-template>
+<ng-template [ngIf]="ip=='blue'">
+  <h3 style="color: blue">color blue</h3>
+</ng-template>
+<ng-template [ngIf]="ip=='yellow'">
+  <h3 style="color: yellow">color yellow</h3>
+</ng-template>
+<input type="text" #multif (keyup)="multiif(multif.value)">
+
+
+<br><br><br>
+<h1>switch case</h1>
+<div [ngSwitch]="option">
+  <h3 *ngSwitchCase="'red'" style="color: red;"> red color</h3>
+  <h3 *ngSwitchCase="'pink'" style="color: pink;"> pink color</h3>
+  <h3 *ngSwitchCase="'blue'" style="color: blue;"> blue color</h3>
+  <h3 *ngSwitchCase="'purple'" style="color: purple;"> purple color</h3>
+  <h3 *ngSwitchCase="'green'" style="color: green;"> green color</h3>
+  <h3 *ngSwitchCase="'grey'" style="color: grey;"> grey color</h3>
+  <h3 *ngSwitchCase="'orange'" style="color: orange;"> orange color</h3>
+  <h3 *ngSwitchCase="'magenta'" style="color: magenta"> magenta color</h3>
+  <h3 *ngSwitchCase="'salmon'" style="color: salmon;"> salmon color</h3>
+  <h3 *ngSwitchCase="'aqua'" style="color: aqua;"> aqua color</h3>
+  <h3 *ngSwitchCase="''" > enter color</h3>
+  <h3 *ngSwitchDefault>color is not in list</h3>
+</div>
+<input type="text" #switchcas (keyup)="switchcase(switchcas.value)">
+
+
+
+
+<br><br><br>
+<h1>dynamic binding</h1>
+<h3 [style.color]="fcolor" [style.backgroundColor]="bgcolor">dynamic binding change color</h3>
+<button #fc (click)="fcol()">change font color</button><br><br>
+<button #bgc (click)="bgcol()">change background color</button>
