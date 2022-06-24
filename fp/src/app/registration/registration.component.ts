@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-registration',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class RegistrationComponent implements OnInit {
 
   constructor() { }
-
+  @Output() ctop=new EventEmitter<string>()
   ngOnInit(): void {
   }
 

@@ -1,6 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component } from '@angular/core';
 import { reduce } from 'rxjs';
+import {NgForm} from '@angular/forms'
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,15 @@ ip=''
 option=''
 fcolor='yellow'
 bgcolor='maroon'
+fdata:any={}
+childdata= 50
+perentdata='mileen';
+dta:any;
+
+
+
+
+
 aler1(name:any){
   alert(name);
 }
@@ -50,5 +60,20 @@ bgcol(){
   this.bgcolor=='maroon' ? this.bgcolor= 'black' : this.bgcolor='maroon'
 }
 
+formdata(data:NgForm){
+  console.log(data)
+this.fdata=data
+}
+
+
+cdatachange(){
+  this.childdata=Math.random()
+
+}
+
+pdata(pd:string){
+  console.log(pd)
+this.perentdata=pd
+}
 
 }

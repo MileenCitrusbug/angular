@@ -86,3 +86,67 @@
 <h3 [style.color]="fcolor" [style.backgroundColor]="bgcolor">dynamic binding change color</h3>
 <button #fc (click)="fcol()">change font color</button><br><br>
 <button #bgc (click)="bgcol()">change background color</button>
+
+
+
+<br><br><br>
+<h1>Header</h1>
+<br><br>
+<nav>
+<img src="https://global-uploads.webflow.com/5e157547d6f791d34ea4e2bf/6087f7f9e5ecc680d23ecbc6_logo-example7.svg" alt="">
+<ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Contact us</a></li>
+  <li><a href="#">Register</a></li>
+  <li><a href="#">About</a></li>
+</ul>
+</nav>
+
+
+
+<br><br><br>
+<h1>Basic form</h1>
+<br><br>
+<form #form="ngForm" (ngSubmit)="formdata(form.value)">
+
+<input ngModel type="text" name="name" placeholder="user name"><br><br>
+<input ngModel type="text" name="email" placeholder="email"><br><br>
+<input ngModel type="password" name="pass" placeholder="password"><br><br>
+<input ngModel type="text" name="mob" placeholder="mobile number"><br><br>
+<button>Submit</button>
+
+</form>
+
+<h1>form data</h1>
+<ul><li>{{fdata.name}}</li>
+  <li>{{fdata.email}}</li>
+  <li>{{fdata.pass}}</li>
+  <li>{{fdata.mob}}</li></ul>
+
+
+
+  
+<br><br><br>
+<h1>pass data perent to child componant</h1>
+<br>
+
+<app-login [cdata]="childdata"></app-login>
+<button (click)="cdatachange()">click to change child data</button>
+<br><br><br>
+
+
+<br><br>
+<h1>pass data child to perent componant</h1>
+
+<h3>{{perentdata}}</h3>
+<app-registration (ctop)="pdata($event)">
+
+</app-registration>
+
+
+
+
+<br><br><br><br>
+<h1>Two way binding </h1>
+<input type="text" [(ngModel)]="dta">
+<h3>{{ dta }}</h3>

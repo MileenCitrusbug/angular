@@ -1,0 +1,25 @@
+nav img{
+    width: 320px;
+    height: 70px;
+}
+nav{
+    background-color:bisque;
+    padding: 18px;
+}
+nav ul{
+    float: right;
+    list-style-type: none;
+margin-bottom: 20px;
+}
+ul li{
+    display: inline-block;
+    padding: 20px;
+    font-size: 20px;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+li a{
+    color:brown;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
