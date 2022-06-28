@@ -1,0 +1,50 @@
+.cf_error_inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+.cf_error_inner h1 {
+  font-size: 145px;
+  font-weight: 700;
+  margin: 0px;
+  color: #252b42;
+  text-transform: uppercase;
+}
+.cf_error_inner h1 span {
+  color: #51aa74;
+}
+.cf_error_inner p {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #252b42;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.home_btn {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: #51aa74;
+  color: #fafafa;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  font-size: 18px;
+  border-radius: 7px;
+  margin-top: 25px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.home_btn:hover {
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .cf_error_inner h1 {
+    font-size: 88px;
+  }
+}

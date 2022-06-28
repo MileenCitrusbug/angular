@@ -1,0 +1,132 @@
+.cf_table_wrapper .table > :not(:first-child) {
+  border-top: none;
+}
+.cf_table_wrapper table thead {
+  border-bottom: transparent;
+}
+.cf_table_wrapper table tr th {
+  text-align: center;
+  text-transform: capitalize;
+}
+.cf_table_wrapper table tr td {
+  min-width: 170px;
+}
+.brdr_l_none {
+  border-left: none;
+}
+.brdr_r_none {
+  border-right: none;
+}
+.brdr_tp_none {
+  border-top: none;
+}
+.brdr_bt_none {
+  border-bottom: none;
+}
+.brdr_lr_none {
+  border-right: none;
+  border-left: none;
+}
+.brdr_l_transparent {
+  border-left: transparent;
+}
+.brdr_b_transparent {
+  border-bottom: transparent;
+}
+.brdr_right {
+  border-right: 1px solid #ced4da;
+}
+.brdr_left {
+  border-left: 1px solid #ced4da !important;
+}
+.cf_main_table {
+  border-bottom: transparent;
+  margin-bottom: 0;
+}
+.ceras_yield_model_table {
+  border-bottom: transparent;
+  border-right: transparent;
+}
+.ceras_yield_model_table tr th:nth-child(4) table tr th:nth-child(1) {
+  border-left: none;
+}
+.ceras_yield_model_table tr td:nth-child(1) {
+  border-left: none;
+}
+
+.ceras_yield_model_table tr td:nth-child(4) table tr td:nth-child(1) {
+  border-left: none;
+}
+.cf_user_table tr th {
+  text-align: left !important;
+  border-bottom: 1px solid #ced4da;
+  padding-bottom: 9.6px;
+}
+.cf_user_table tr td {
+  min-width: 200px;
+}
+.cf_user_table tr td:nth-child(1) {
+  min-width: 80px;
+  text-align: center;
+}
+.cf_user_table tr td:nth-child(6) {
+  min-width: 160px;
+}
+
+.cf_checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+}
+.cf_checkbox input {
+  position: absolute;
+  left: -99999999px;
+}
+.cf_checkbox label {
+  position: relative;
+}
+.cf_checkbox label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 24px;
+  height: 22px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transform: translateY(-50%);
+}
+.cf_checkbox label::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 4px;
+  width: 16px;
+  height: 8px;
+  border-bottom: 3px solid #4b95d6;
+  border-left: 3px solid #4b95d6;
+  transform: rotate(-45deg);
+  visibility: hidden;
+  opacity: 1;
+}
+.cf_checkbox input:checked ~ label::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cf_rights_table {
+  border-bottom: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  margin-bottom: 0;
+}
+.status_dropdown {
+  padding: 0 10px;
+}
+.status_dropdown select {
+  width: 96%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
