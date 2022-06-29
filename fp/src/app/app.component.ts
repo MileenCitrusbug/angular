@@ -20,8 +20,9 @@ bgcolor='maroon'
 fdata:any={}
 childdata= 50
 perentdata='mileen';
-dta:any;
+dta:any;  
 
+arr= [1,2,3,4,5]
 
 
 

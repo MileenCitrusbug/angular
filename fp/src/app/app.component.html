@@ -150,3 +150,10 @@
 <h1>Two way binding </h1>
 <input type="text" [(ngModel)]="dta">
 <h3>{{ dta }}</h3>
+
+<br><br><br><br>
+
+<h3 *ngFor="let items of arr">
+<button>{{items}}</button>
+
+</h3>

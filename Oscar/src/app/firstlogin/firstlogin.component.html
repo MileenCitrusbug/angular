@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Other Information</title>
+  
+</head>
+<body>
+  <div class="cf_login_wrapper">
+    <div class="cf_login_inner">
+      <div class="cf_login_block">
+        <div class="cf_login_logoBlock">
+          <img src="assets/images/logo2.svg" alt="Cafetra" class="img-fluid">
+        </div>
+        <h3>Other Information</h3>
+        <div class="cf_form_block">
+          <input type="text" placeholder="Company Name" class="cf_form_field">
+          <span class="cf_icon cf_user"></span>
+        </div>
+        <div class="cf_form_block">
+            <select class="cf_form_field"  onChange="check1(this);">
+                <option value="" disabled selected hidden>Company Type</option>
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option 3">Option 3</option>
+                <option>Other</option>
+            </select>
+            <span class="cf_icon cf_down_green"></span>
+            <div id="company_type" style="display:none;" class="mt-3">
+                <input id="other-input" class="cf_form_field">
+            </div>
+        </div>
+        <div class="cf_form_block">
+            <select class="cf_form_field"  onChange="check(this);">
+                <option value="" disabled selected hidden>Your Role</option>
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option 3">Option 3</option>
+                <option>Other</option>
+            </select>
+            <span class="cf_icon cf_down_green"></span>
+            <div id="your_role" style="display:none;" class="mt-3">
+                <input class="cf_form_field">
+            </div>
+        </div>
+        <div class="cf_form_block">
+            <select class="cf_form_field" id="mySelect" onChange="check(this);">
+                <option value="" disabled selected hidden>Country</option>
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option 3">Option 3</option>
+            </select>
+            <span class="cf_icon cf_down_green"></span>           
+        </div>
+        <div class="cf_form_block">
+          <a href="javascript:;" class="cf_btn">Submit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+<script>
+    
+</script>
+</body>
+</html>

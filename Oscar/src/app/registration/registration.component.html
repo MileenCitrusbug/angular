@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Register</title>
 </head>
 <body>
   <div class="cf_login_wrapper">
@@ -13,34 +13,53 @@
         <div class="cf_login_logoBlock">
           <img src="assets/images/logo2.svg" alt="Cafetra" class="img-fluid">
         </div>
-        <h3>Log into your account</h3>
-        <div class="cf_form_block error">
-          <input type="email" placeholder="Enter Email" class="cf_form_field">
+        <h3>Register your account</h3>
+        <div class="cf_form_block">
+          <input type="text" placeholder="First Name" class="cf_form_field">
+          <span class="cf_icon cf_user"></span>
+        </div>
+        <div class="cf_form_block">
+          <input type="text" placeholder="Last Name" class="cf_form_field">
+          <span class="cf_icon cf_user"></span>
+        </div>
+        <div class="cf_form_block">
+          <input type="number" placeholder="Contact" class="cf_form_field">
+          <span class="cf_icon cf_call"></span>
+        </div>
+        <div class="cf_form_block">
+          <select class="cf_form_field">
+            <option value="" disabled selected hidden>Company Role</option>
+            <option value="Trader">Trader</option>
+            <option value="Purchaser">Purchaser</option>
+            <option value="Market Analyst">Market Analyst</option>
+          </select>
+          <span class="cf_icon cf_down_green"></span>
+        </div>
+        <div class="cf_form_block">
+          <select class="cf_form_field">
+            <option value="" disabled selected hidden>Company Type</option>
+            <option value="Option 1">Option 1</option>
+            <option value="Option 2">Option 2</option>
+            <option value="Option 3">Option 3</option>
+          </select>
+          <span class="cf_icon cf_down_green"></span>
+        </div>
+        <div class="cf_form_block">
+          <input type="email" placeholder="Email" class="cf_form_field">
           <span class="cf_icon cf_mail_green"></span>
-          <span class="response_message error">I'm error</span>
         </div>
-        <div class="cf_form_block success">
-          <input type="password" placeholder="Enter Password" class="cf_form_field">
+        <div class="cf_form_block">
+          <input type="password" placeholder="Password" class="cf_form_field">
           <span class="cf_icon cf_eye_green"></span>
-          <span class="response_message success">I'm success</span>
         </div>
         <div class="cf_form_block">
-          <div class="cf_flex_box">
-            <div class="cf_remember_block">
-              <input type="checkbox" name="remember_me" id="remember_me">
-              <label for="remember_me">
-                Remember me
-              </label>
-            </div>
-            <div class="cf_forgot_block">
-              <a href="forgot_password.html">Forgot Password?</a>
-            </div>
-          </div>
+          <input type="password" placeholder="Confirm Password" class="cf_form_field">
+          <span class="cf_icon cf_eye_green"></span>
         </div>
         <div class="cf_form_block">
-          <a href="javascript:;" class="cf_btn">Login</a>
+          <a href="javascript:;" class="cf_btn">Register</a>
         </div>
-        <p class="cf_redirect">Don't have an account? <a href="register.html">Register now</a></p>
+        <p class="cf_redirect">Have an account? <a href="login.html">Login</a></p>
       </div>
     </div>
   </div>

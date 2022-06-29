@@ -1,0 +1,49 @@
+<h1 > angular events</h1>
+<input #ipbox placeholder="enter name" (keyup)="getname(ipbox.value)"><br><br>
+<button (click)="getboxval(ipbox.value)">click to alert</button>
+
+
+
+
+<br><br>
+<h3 (mouseover)="mover()">box name on key up:   {{name}}</h3>
+<br><br><br>
+
+
+
+
+
+<h1 [style]=style>property binding</h1>
+<button (click)="shade('+')">dark</button>
+<button (click)="shade('-')">light</button>
+
+
+<br><br><br><br><br>
+<h1 *ngIf="visible">Toggle button on if condition</h1>
+<button (click)="toggle()">toggle</button>
+
+
+
+
+
+<br><br><br><br><br>
+<input type="text" #box1 (keyup)="ifelse(box1.value)">
+<h1 *ngIf="val1; then field else empty"></h1>
+<ng-template #empty>
+    <h3>box is empty</h3>
+</ng-template>
+<ng-template #field>
+    <h3>box have value</h3>
+</ng-template>
+
+
+<!-- <br><br><br><br><br>
+<input type="text" #box2 placeholder="enter citrusbug for autho" ><br>
+<h1 *ngIf="autho; then ifb else elseb "></h1>
+<ng-template #ifb>
+    <h3>you are authorised member</h3>
+</ng-template>
+<ng-template #elseb>
+    <h3>you are un authorised member</h3>
+</ng-template>
+ -->
