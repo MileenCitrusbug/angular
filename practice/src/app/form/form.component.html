@@ -1,0 +1,21 @@
+<h1>Registration Form</h1>
+<form #regform="ngForm" (ngSubmit)="formdata(regform.value)">
+
+
+<input type="text" ngModel name="name" placeholder="enter name">
+<br><br>
+<input type="text" ngModel name="email" placeholder="enter email">
+<br><br>
+<input type="text" ngModel name="mobile" placeholder="enter mobile number">
+<br><br>
+<input type="text" ngModel name="password" placeholder="enter password">
+<br><br>
+<button>Submit</button>
+</form>
+
+
+
+<br><br><br>
+
+<li>{{multiuse.name}}</li>
+<li>{{multiuse.email}}</li>

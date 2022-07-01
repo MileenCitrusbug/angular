@@ -27,6 +27,7 @@
 
 
 <br><br><br><br><br>
+<h1>If-Else condition</h1>
 <input type="text" #box1 (keyup)="ifelse(box1.value)">
 <h1 *ngIf="val1; then field else empty"></h1>
 <ng-template #empty>
@@ -37,13 +38,104 @@
 </ng-template>
 
 
-<!-- <br><br><br><br><br>
-<input type="text" #box2 placeholder="enter citrusbug for autho" ><br>
-<h1 *ngIf="autho; then ifb else elseb "></h1>
-<ng-template #ifb>
-    <h3>you are authorised member</h3>
+<br><br><br><br><br>
+<h1>Multiple if condition</h1>
+<input type="text" #box2 placeholder="8 or more isn't acceptable" (keyup)="multiif(box2.value)" ><br>
+
+<ng-template [ngIf]="val2=='0'">
+    <h3>Enter between 1 to 7 for day</h3>
 </ng-template>
-<ng-template #elseb>
-    <h3>you are un authorised member</h3>
+<ng-template [ngIf]="val2=='1'">
+    <h3>It's Monday</h3>
 </ng-template>
- -->
+<ng-template [ngIf]="val2=='2'">
+    <h3>It's Tuesday</h3>
+</ng-template>
+<ng-template [ngIf]="val2=='3'">
+    <h3>It's Wednesday</h3>
+</ng-template>
+<ng-template [ngIf]="val2=='4'">
+    <h3>It's Thursday</h3>
+</ng-template>
+<ng-template [ngIf]="val2=='5'">
+    <h3>It's Friday</h3>
+</ng-template>
+<ng-template [ngIf]="val2=='6'">
+    <h3>It's Saturday</h3>
+</ng-template>
+<ng-template [ngIf]="val2=='7'">
+    <h3>It's Sunday</h3>
+</ng-template>
+
+
+
+
+
+<br><br><br><br><br>
+<h1>Switch-case condition</h1>
+<input type="text" #box3 placeholder="all number are acceptable" (keyup)="scase(box3.value)" ><br>
+<div [ngSwitch]="val3">
+<h3 *ngSwitchDefault="">enter value between 1 to 8</h3>
+<h3 *ngSwitchCase="'1'">it's Monday</h3>
+<h3 *ngSwitchCase="'2'">it's Tuesday</h3>
+<h3 *ngSwitchCase="'3'">it's Wednesday</h3>
+<h3 *ngSwitchCase="'4'">it's Thursday</h3>
+<h3 *ngSwitchCase="'5'">it's Friday</h3>
+<h3 *ngSwitchCase="'6'">it's Saturday</h3>
+<h3 *ngSwitchCase="'7'">it's Sunday</h3>
+<h3 *ngSwitchCase="'0'">Enter number to get day</h3>
+
+</div>
+
+
+
+
+
+<br><br><br><br><br>
+<h1>For loop</h1>
+<input type="text" #box4 placeholder="Enter number for get button" (blur)="floop(box4.value)" ><br>
+
+    <!-- <button *ngFor="let b in val4">button {{b}}</button> -->
+    <div *ngFor="let items of  arr">
+    <button>button{{items}}</button>
+     </div>
+
+
+
+     <br><br><br><br><br>
+<h1 [style.color]="val5"> Style binding</h1>
+<input type="text" #box5 placeholder="Enter color name" ><br><br><br>
+<button (click)="nloop(box5.value)">click to change</button>
+
+
+
+
+<br><br><br><br><br>
+<h1 >Nested for loop</h1>
+<h3 *ngFor="let students of data">
+    <ul>
+        <li>{{students.name}}</li>
+        <li>{{students.college}}</li>
+        <li>subjects</li>
+         <ul *ngFor="let sub of students.subject">
+            <li>{{sub}}</li>
+         </ul>
+    </ul>
+
+</h3>
+
+
+
+
+
+<br><br><br><br>
+<h1>{{chaildval }}:this value coming from perent </h1>
+
+
+
+
+
+<br><br><br><br>
+<h1>two-way binding</h1>
+<input type="text" [(ngModel)]="val6" #box6 placeholder="two-way binding">
+<h3>{{val6}}</h3>

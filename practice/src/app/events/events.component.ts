@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
 
 @Component({
   selector: 'app-events',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class EventsComponent implements OnInit {
 
   constructor() { }
-
+@Input() chaildval=""
   ngOnInit(): void {
   }
 name=''
@@ -17,6 +17,20 @@ style="color: rgba(0, 0, 0, 0.5);"
 visible= true
 val1=false
 autho=true
+val2='0'
+val3='0'
+val4= 1
+arr:any[]=[]
+val5='black'
+data=[
+  {name:'raj',college:'ljiet',subject:['cs', 'maths','dec']},
+  {name:'meet',college:'ms uni',subject:['eg', 'env','stru']},
+  {name:'rohan',college:'adit',subject:['c++', 'python','dev']},
+  {name:'yash',college:'ldce',subject:['social', 'crp','vvi']},
+  {name:'tony',college:'st. zeviasrs',subject:['cs', 'eg','c++']}
+]
+val6=''
+
 
 
 
@@ -48,13 +62,43 @@ console.log(this.style)
 
 toggle(){
 
-  this.visible==true? this.visible=false : this.visible= true
+  // this.visible==true? this.visible=false : this.visible= true
+  this.visible =! this.visible
 }
 
 ifelse(value1:string){
  value1.length==0?this.val1=false:this.val1=true
 
 }
+
+multiif(value2:string)
+{
+this.val2=value2  
+}
+
+
+
+scase(value3:string)
+{
+this.val3=value3
+// console.log(value3)
+}
+
+
+floop(value4:any)
+{
+this.val4=value4
+console.log(this.val4)
+for(let  i=0; i<=this.val4; i++){
+// {console.log(this.arr)
+  this.arr.push(i);} 
+}
+
+nloop(value5:string)
+{
+this.val5=value5
+}
+
 
 
 }

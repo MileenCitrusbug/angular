@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practice';
+
+
+  name="mileen"
+
+  perentdata=[
+    {name:'raj',college:'ljiet'},
+    {name:'meet',college:'ms uni'},
+    {name:'rohan',college:'adit'},
+    {name:'yash',college:'ldce'},
+    {name:'tony',college:'st. zeviasrs'}
+  ]
 }
