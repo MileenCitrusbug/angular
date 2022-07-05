@@ -1,0 +1,25 @@
+<h1>User signup form with validation(reactive)</h1>
+
+<form [formGroup]="reactiveform" (ngSubmit)="subform(reactiveform.value)">
+    <input type="text" placeholder="enter name" formControlName="name">
+    <span *ngIf="name && name.invalid && name.touched">
+        **enter valid name
+    </span>
+    <br><br>
+    <input type="email" placeholder="enter email id" formControlName="email">
+    <span *ngIf="email && email.invalid && email.touched">
+        **enter valid email
+    </span>
+    <br><br>
+    <input type="text" placeholder="enter your contact number" formControlName="number">
+    <span *ngIf="num && num.invalid && num.touched">
+        **enter valid number
+    </span>
+    <br><br>
+    <input type="password" placeholder="enter password" formControlName="password">
+    <span *ngIf="pass && pass.invalid && pass.touched">
+        **enter valid password
+    </span>
+    <br><br>
+    <button [disabled]="reactiveform.invalid">Submit</button>
+</form>

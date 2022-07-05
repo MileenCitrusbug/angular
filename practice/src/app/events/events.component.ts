@@ -9,6 +9,7 @@ export class EventsComponent implements OnInit {
 
   constructor() { }
 @Input() chaildval=""
+@Input() chaildval2=""
   ngOnInit(): void {
   }
 name=''
@@ -30,6 +31,7 @@ data=[
   {name:'tony',college:'st. zeviasrs',subject:['cs', 'eg','c++']}
 ]
 val6=''
+val7:number=0
 
 
 
@@ -55,7 +57,7 @@ mover(){
 shade(data:string){
 data==='+'?this.black++:this.black--
 let a=this.black/10
-console.log(a)
+// console.log(a)
 this.style="color: rgba(0, 0, 0,"+a+" );"
 console.log(this.style)
 }
@@ -89,7 +91,7 @@ floop(value4:any)
 {
 this.val4=value4
 console.log(this.val4)
-for(let  i=0; i<=this.val4; i++){
+for(let  i=0; i<=value4; i++){
 // {console.log(this.arr)
   this.arr.push(i);} 
 }

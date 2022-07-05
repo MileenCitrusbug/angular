@@ -10,6 +10,7 @@ export class AppComponent {
 
 
   name="mileen"
+  name2="raj"
 
   perentdata=[
     {name:'raj',college:'ljiet'},

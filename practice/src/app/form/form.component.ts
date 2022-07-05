@@ -8,12 +8,13 @@ import{NgForm}from '@angular/forms'
 export class FormComponent implements OnInit {
 
   constructor() { }
-@Input() multiuse:{name:string,email: string}={name:'',email:''}
+@Input() multiuse:{name:string,college: string}={name:'',college:''};
   ngOnInit(): void {
   }
 
 formdata(data:NgForm){
 console.log(data)
 }
+
 
 }

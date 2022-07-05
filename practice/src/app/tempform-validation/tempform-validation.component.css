@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+    color: black;
+    font-size: 40px;
+}
+input{
+    margin-left: 43%;
+    width: 250px;
+    height: 20px;
+}
+button{
+    margin-left: 48%
+}
+span{
+    color: red;
+}
