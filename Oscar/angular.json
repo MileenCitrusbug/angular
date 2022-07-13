@@ -28,13 +28,18 @@
               "src/assets/css/common.css",
               "src/assets/css/login.css",
               "src/assets/css/custom.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/index.css",
+              "src/assets/css/404_error.css",
+              "src/assets/css/landing.css"
+              
             ],
             "scripts": [
 
               "src/assets/js/jquery-3.6.0.min.js",
               "src/assets/js/bootstrap.bundle.min.js",
-              "src/assets/js/custom.js"
+              "src/assets/js/custom.js",
+              "src/assets/js/swiper-bundle.min.js"
 
             ]
           },

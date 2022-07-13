@@ -1,0 +1,656 @@
+{
+	"info": {
+		"_postman_id": "074d0df1-9f6b-445e-bc23-23d0f603bbad",
+		"name": "Oscar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKVsdsd1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNjMxMzQ2LCJpYXQiOjE2NDM2MzEwNDYsImp0aSI6IjM2YmU4NDQzMjBkNDRiODNhMGU2YmU0ODYyMjAyMTE1IiwidXNlcl9pZCI6M30.QQi4x-nY7RCtE4w63lD5g3bkpHrhtV1xUMY7DMffeuM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "neel.citrusbug@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Patel@",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/api/v1/login/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNjMxMzQ2LCJpYXQiOjE2NDM2MzEwNDYsImp0aSI6IjM2YmU4NDQzMjBkNDRiODNhMGU2YmU0ODYyMjAyMTE1IiwidXNlcl9pZCI6M30.QQi4x-nY7RCtE4w63lD5g3bkpHrhtV1xUMY7DMffeuM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNjI2MzgyLCJpYXQiOjE2NDM2MjYwODIsImp0aSI6ImE1NDJjZTc0MTE4NjRkYTU5M2MyNmQ2NzQ2Y2RiZGY1IiwidXNlcl9pZCI6MjF9.IIRqzjUplMztRrmb5XTTyopu_wJKEIKM0mq6vjEejCwh",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "kishasnssdsss@yopmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "asd@Asd1",
+									"type": "text"
+								},
+								{
+									"key": "first_name",
+									"value": "karmaraj",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "test technolabs",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "7894561230",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/api/v1/signup/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"signup",
+								""
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "kishan1.citrusbug@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "Vaghela@99",
+									"disabled": true
+								},
+								{
+									"key": "full_name",
+									"value": "kishan",
+									"disabled": true
+								},
+								{
+									"key": "company_name",
+									"value": "cb",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token refresh",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "refresh",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0Mzk2NDIyNSwiaWF0IjoxNjQzODc3ODI1LCJqdGkiOiJmYzc5OTJmYTc0MDE0YjQ4YmQzYTFlMDNmYWRmZjcxYyIsInVzZXJfaWQiOjIzfQ.12z5vmBzBdwj_y8QJcKMbLWjBFh8cGzEd6nmO5LjhhI",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/api/v1/token/refresh/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"token",
+								"refresh",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "kishan1.citrusbug@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/api/v1/forgot-password/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"forgot-password",
+								""
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "kishan1.citrusbug@gmail.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "password",
+									"value": "Vaghela@99",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/api/v1/reset-password/d8b48eb4-8003-499e-abd0-d0dda495e6a4",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reset-password",
+								"d8b48eb4-8003-499e-abd0-d0dda495e6a4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit-user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzNjI4NzIwLCJpYXQiOjE2NDM2Mjg0MjAsImp0aSI6Ijg0NWM2NmMyNDU3NTRlYjViZDMzZWYxMGY2MGM5YWI3IiwidXNlcl9pZCI6Mn0.spBp9LqI3wQttFM6RRrT0kz0DY1BnMjY3lKULQjQofo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/api/v1/edit-profile/2",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"edit-profile",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit-user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ1MTc2ODMzLCJpYXQiOjE2NDUwOTA0MzMsImp0aSI6ImVmMmZmY2MyNzQxZDRkNzU5MzFhMDc3MTRmMWQ2YzNiIiwidXNlcl9pZCI6NTB9.XImL6GoM3zYI5l7qcYLSLQaxQjgoO3ZzRSAbzNqw0xc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "john",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "doe",
+									"type": "text"
+								},
+								{
+									"key": "company_name",
+									"value": "john doe tech",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Patel@99",
+									"type": "text"
+								},
+								{
+									"key": "current_pass",
+									"value": "Patel@99",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/api/v1/edit-profile/50",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"edit-profile",
+								"50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "otp verify",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "otp",
+									"value": "49775",
+									"type": "text"
+								},
+								{
+									"key": "unique_id",
+									"value": "f4edcd86-7dcd-4eda-be70-f5786fc11d0f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/api/v1/otp-verify/",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"otp-verify",
+								""
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "f4edcd86-7dcd-4eda-be70-f5786fc11d0f",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "complete-signup",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQzMzQ0MDI0LCJpYXQiOjE2NDMzNDM3MjQsImp0aSI6ImRlNWQ1NDNmMWJmMTRkOTZhMjhiYjViNjA2Y2UwYmRmIiwidXNlcl9pZCI6Mn0.TnN_ZeaaAKt76aKtseGOhCw_4EzEJiMEnGiEn4DRsIU",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "Company role list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/api/v1/companyrole",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"companyrole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "company type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/api/v1/companytype",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"companytype"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add company role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "role",
+									"value": "newrole",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/api/v1/companyrole",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"companyrole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add company type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "newtype",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/api/v1/companytype",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"companytype"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subcategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base}}/api/v1/subcategory/",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"subcategory",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subsubcategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base}}/api/v1/subsubcategory/price-analysis-fair-values",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"subsubcategory",
+						"price-analysis-fair-values"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base}}/api/v1/category/",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subcategorylist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base}}/api/v1/subsubcategory",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"subsubcategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_html",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": "http://15.206.232.197:9300",
+			"type": "string"
+		},
+		{
+			"key": "local",
+			"value": "http://15.206.232.197:9300",
+			"type": "string"
+		}
+	]
+}
