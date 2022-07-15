@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-
+import { Route, Router } from '@angular/router';
+import {ApiService} from '../../services/API/api.service'
+ 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -8,7 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiservice: ApiService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +25,22 @@ export class RegistrationComponent implements OnInit {
 
   submitRegistration(data:any){
     console.log(data)
+
+    const postbody = {
+      email: data.email,
+first_name: data .fname,
+last_name: data.lname,
+// company_type: 5,
+// company_role: 3,
+password: data.password,
+phone: data.number,
+      }  ;
+console.log(postbody)
+
+
+
+     this.apiservice.adduser(postbody).subscribe((data : any) =>{this.router.navigate(['login'])},
+      )
   }
 
   get fname(){

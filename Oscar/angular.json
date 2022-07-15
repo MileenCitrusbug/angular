@@ -31,7 +31,12 @@
               "src/styles.css",
               "src/assets/css/index.css",
               "src/assets/css/404_error.css",
-              "src/assets/css/landing.css"
+              "src/assets/css/landing.css",
+              // "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0",
+              "src/assets/css/dashboard.css",
+              "src/assets/css/us_sales.css",
+              "src/assets/css/mini-event-calendar.min.css",
+              "src/assets/css/Home.css"
               
             ],
             "scripts": [
@@ -39,7 +44,8 @@
               "src/assets/js/jquery-3.6.0.min.js",
               "src/assets/js/bootstrap.bundle.min.js",
               "src/assets/js/custom.js",
-              "src/assets/js/swiper-bundle.min.js"
+              "src/assets/js/swiper-bundle.min.js",
+              "src/assets/js/mini-event-calendar.min.js"
 
             ]
           },

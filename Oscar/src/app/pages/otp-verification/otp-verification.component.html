@@ -15,13 +15,16 @@
         </div>
         <h3>Please Enter OTP</h3>
         <span class="login_subline">Please check your Email, We have sent an OTP number.</span>
+        <form [formGroup]="otpForm" (ngSubmit)="submitOTP(otpForm.value)">
         <div class="cf_form_block">
-          <input type="number" placeholder="Enter OTP" class="cf_form_field">
+          <input type="number" ngModel formControlName="otp" placeholder="Enter OTP" class="cf_form_field">
         </div>
+ 
         <div class="cf_form_block">
-          <a href="javascript:;" class="cf_btn">Submit</a>
+          <button class="cf_btn">Submit</button>
         </div>
-      </div>
+      </form> 
+    </div>  
     </div>
   </div>
   <script src="assets/js/jquery-3.6.0.min.js"></script>

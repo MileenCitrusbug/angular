@@ -15,6 +15,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
+import { AuthService } from './services/auth/auth.service';
+import { AuthGuard } from './guards/auth.guard';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +33,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     EditProfileComponent,
     HomeComponent,
     AboutComponent,
-    ContactusComponent
+    ContactusComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, AuthService, AuthGuard]
 })
 export class AppModule { }

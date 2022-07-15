@@ -14,15 +14,24 @@
           <img src="assets/images/logo2.svg" alt="Cafetra" class="img-fluid">
         </div>
         <h3>Log into your account</h3>
-        <div class="cf_form_block error">
-          <input type="email" placeholder="Enter Email" class="cf_form_field">
+
+
+
+
+
+
+        <form [formGroup]="loginForm" (ngSubmit)="submitlogin(loginForm.value)" >
+        <div  class="cf_form_block success">
+          <input ngModel type="email" placeholder="Enter Email" class="cf_form_field" formControlName="email">
           <span class="cf_icon cf_mail_green"></span>
-          <span class="response_message error">I'm error</span>
+          <span style="color: red;" *ngIf="email && email.invalid && email.touched">
+            **enter valid email
+        </span>
         </div>
         <div class="cf_form_block success">
-          <input type="password" placeholder="Enter Password" class="cf_form_field">
+          <input ngModel type="password" placeholder="Enter Password" class="cf_form_field" formControlName="password">
           <span class="cf_icon cf_eye_green"></span>
-          <span class="response_message success">I'm success</span>
+          
         </div>
         <div class="cf_form_block">
           <div class="cf_flex_box">
@@ -38,8 +47,10 @@
           </div>
         </div>
         <div class="cf_form_block">
-          <a href="javascript:;" class="cf_btn">Login</a>
+          <button class="cf_btn">Login</button>
         </div>
+      </form>
+
         <p class="cf_redirect">Don't have an account? <a routerLink="../registration">Register now</a></p>
       </div>
     </div>
