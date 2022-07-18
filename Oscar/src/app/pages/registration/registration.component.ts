@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
+import { elementAt } from 'rxjs';
 import {ApiService} from '../../services/API/api.service'
  
 @Component({
@@ -19,7 +20,9 @@ export class RegistrationComponent implements OnInit {
     lname: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required,  Validators.email]),
     number:  new FormControl('', [Validators.required, Validators.minLength(10),Validators.maxLength(12) ]),
-    password: new FormControl('', [Validators.required ,Validators.pattern("(?=^.{8,}$)(?=.*\d)(?=.*[!@#$%^&*]+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$")])
+    password: new FormControl('', [Validators.required , Validators.minLength(8)
+  
+    ])
   })
 
 
@@ -35,11 +38,16 @@ last_name: data.lname,
 password: data.password,
 phone: data.number,
       }  ;
-console.log(postbody)
+// console.log(postbody)
 
 
 
-     this.apiservice.adduser(postbody).subscribe((data : any) =>{this.router.navigate(['login'])},
+     this.apiservice.adduser(postbody).subscribe((data : any) =>{
+      if(data.status=== true){
+      alert(data.message)
+      // alert(data.status)
+      this.router.navigate(['login'])}
+      else{alert(data.message)}}
       )
   }
 
@@ -58,6 +66,18 @@ console.log(postbody)
   get pass(){
     return this.registrationForm.get('password')
   }
+
+
+  setData(){
+// console.log( this.registrationForm.('fname')?.value)
+
+this.registrationForm.patchValue({
+  fname: "mileen"
+})
+}
+
+
+
 }
 
 

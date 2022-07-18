@@ -17,27 +17,34 @@ export class OtpVerificationComponent implements OnInit {
   ngOnInit(): void {
   }
  otpForm= new FormGroup({
- otp : new FormControl('',Validators.required)
-  
-
- })
+ otp : new FormControl('',[Validators.required,Validators.pattern('[0-9]')])})
 
 
 
  submitOTP(data:any){
 
   console.log(data)
-const otpbody =[
+const otpbody =
 {
-  "otp": data.otp,
-  "unique_id":localStorage.getItem('userid')
-}]
+  otp: data.otp.toString(),
+  unique_id:localStorage.getItem('userid')
+}
 // console.log(otpbody)
 
-this.apiservice.otpVerification(otpbody).subscribe((data:any)=> console.log(data)
+this.apiservice.otpVerification(otpbody).subscribe((data:any)=> 
+
+{if (data.status === true){
+  console.log(data)
+
+alert(data.message),
+localStorage.setItem('fname', data.data.first_name),
+localStorage.setItem('lnamename', data.data.last_name),
+this.router.navigate(['dashboard'])
+}
+else{alert(data.message)}
+},
+err =>
+{alert(err)}
   
 )
-
-
- }
-}
+}}

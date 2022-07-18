@@ -6,11 +6,13 @@ import { ContactusComponent } from './pages/contactus/contactus.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { ForgotPassComponent } from './pages/forgot-pass/forgot-pass.component';
 // import { FirstloginComponent } from './pages/firstlogin/firstlogin.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { OtpVerificationComponent } from './pages/otp-verification/otp-verification.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
+// import { ResetPassComponent } from './pages/reset-pass/reset-pass.component';
 import { AuthService } from './services/auth/auth.service';
 
 const routes: Routes = [
@@ -23,7 +25,12 @@ const routes: Routes = [
   {path:"",component:HomeComponent },
   {path:"about", component:AboutComponent},
   {path:"contact", component:ContactusComponent},
-  {path:"**", component:ErrorComponent}
+  {path:"forgot_password", component:ForgotPassComponent},
+  // {path: "reset_password", component:ResetPassComponent},
+  {path:"dashboard/editprofile", component:EditProfileComponent},
+  {path:"**", component:ErrorComponent},
+
+  
 
 ];
 

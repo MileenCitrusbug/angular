@@ -29,10 +29,17 @@
         </span>
         </div>
         <div class="cf_form_block success">
-          <input ngModel type="password" placeholder="Enter Password" class="cf_form_field" formControlName="password">
+          <input ngModel type="password" #newpass placeholder="Enter Password" class="cf_form_field" formControlName="password">
           <span class="cf_icon cf_eye_green"></span>
-          
+          <span style="color: red;" *ngIf="pass && pass.invalid && pass.touched">
+            **enter valid password
+        </span>
+        
+
         </div>
+
+          
+        
         <div class="cf_form_block">
           <div class="cf_flex_box">
             <div class="cf_remember_block">
@@ -42,12 +49,12 @@
               </label>
             </div>
             <div class="cf_forgot_block">
-              <a href="forgot_password.html">Forgot Password?</a>
+              <a routerLink="../forgot_password">Forgot Password?</a>
             </div>
           </div>
         </div>
         <div class="cf_form_block">
-          <button class="cf_btn">Login</button>
+          <button class="cf_btn" >Login</button>
         </div>
       </form>
 

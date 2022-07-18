@@ -17,9 +17,9 @@
 
 
 
-        <form [formGroup]="registrationForm" (ngSubmit)="submitRegistration(registrationForm.value)" >
+        <form [formGroup]="registrationForm" (ngSubmit)="submitRegistration(registrationForm.value)"  >
         <div class="cf_form_block">
-          <input type="text" placeholder="First Name" formControlName="fname" class="cf_form_field">
+          <input type="text" placeholder="First Name"  formControlName="fname" class="cf_form_field">
           <span class="cf_icon cf_user"></span>
           <span *ngIf="fname && fname.invalid && fname.touched" style="color: red;">
             **enter valid first-name
@@ -65,25 +65,23 @@
         <div class="cf_form_block">
           <input type="password" placeholder="Password" formControlName="password" class="cf_form_field">
           <span class="cf_icon cf_eye_green"></span>
-          <!-- <span style="color:red;" *ngIf="pass && pass.invalid && pass.touched">
+          <span style="color:red;"  *ngIf="pass && pass.invalid && pass.touched">
             **enter valid password
-        </span> -->
+        </span>
         </div>
         <!-- <div class="cf_form_block">
           <input type="password" placeholder="Confirm Password" class="cf_form_field">
           <span class="cf_icon cf_eye_green"></span>
         </div> -->
         <div class="cf_form_block">
-         <button
-           type="submit" class="cf_btn">Register </button>
+         <button  type="submit" class="cf_btn">Register </button>
         </div>
       </form>
         <p class="cf_redirect">Have an account? <a routerLink="../login">Login</a></p>
       </div>
     </div>
   </div>
-  <script src="assets/js/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/custom.js"></script>
+
+  <button (click)="setData()"> click to fill filds</button>
 </body>
 </html>

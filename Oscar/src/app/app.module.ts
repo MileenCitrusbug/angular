@@ -8,7 +8,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { OtpVerificationComponent } from './pages/otp-verification/otp-verification.component';
 // import { FirstloginComponent } from './pages/firstlogin/firstlogin.component';
 import { ForgotPassComponent } from './pages/forgot-pass/forgot-pass.component';
-import { ResetPassComponent } from './pages/reset-pass/reset-pass.component';
+// import { ResetPassComponent } from './pages/reset-pass/reset-pass.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -28,7 +28,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     OtpVerificationComponent,
     // FirstloginComponent,
     ForgotPassComponent,
-    ResetPassComponent,
+    // ResetPassComponent,
     ErrorComponent,
     EditProfileComponent,
     HomeComponent,

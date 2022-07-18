@@ -188,7 +188,7 @@
         <div class="cf_dashboard_header_profile">
           <ul>
             <li>
-              <h5>John Doe</h5>
+              <h5>{{fname}} </h5>
             </li>
             <li>
               <div class="cf_header_profile_toggle">
@@ -196,7 +196,7 @@
                 <span class="cf_icon cf_down_black"></span>
                 <ul>
                   <li>
-                    <a href="javascript:;"><span class="cf_icon cf_edit"></span> My Profile</a>
+                    <a routerLink="editprofile"><span class="cf_icon cf_edit"></span> My Profile</a>
                   </li>
                   <li>
                     <a href="javascript:;"><span class="cf_icon cf_bookmark"></span>My Preferences</a>
@@ -208,7 +208,7 @@
                     <a href="javascript:;"><span class="cf_icon cf_phone"></span>Contact Account Manager</a>
                   </li>
                   <li>
-                    <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#cf_logout"><span
+                    <a href="javascript:;" data-bs-toggle="modal" (click)="logout()" data-bs-target="#cf_logout"><span
                         class="cf_icon cf_logout"></span>
                       Logout</a>
                   </li>

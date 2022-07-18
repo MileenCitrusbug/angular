@@ -24,4 +24,9 @@ export class ApiService {
    otpVerification(body:any){
     return this.http.post('http://43.204.196.131:9300/api/v1/otp-verify/',body)
    }
+
+  forgotpass(body:any){
+    return this.http.put('http://43.204.196.131:9300/api/v1/forgot-password/',body)
+  }
+
 }

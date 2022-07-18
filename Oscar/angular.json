@@ -32,7 +32,7 @@
               "src/assets/css/index.css",
               "src/assets/css/404_error.css",
               "src/assets/css/landing.css",
-              // "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0",
+              "src/assets/css/edit_profile.css",
               "src/assets/css/dashboard.css",
               "src/assets/css/us_sales.css",
               "src/assets/css/mini-event-calendar.min.css",
