@@ -11,4 +11,11 @@ export class AuthService {
     return !! localStorage.getItem('userid')
   }
 
+  gettoken(){
+    return localStorage.getItem('token')
+  }
+
+  logout(){
+    return localStorage.clear()
+  }
 }

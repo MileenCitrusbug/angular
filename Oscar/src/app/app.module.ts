@@ -15,10 +15,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactusComponent } from './pages/contactus/contactus.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { AuthService } from './services/auth/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import {TokeninterceptorsService} from './services/interceptoes/tokeninterceptors.service';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     HomeComponent,
     AboutComponent,
     ContactusComponent,
-    DashboardComponent
+    DashboardComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,12 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     ReactiveFormsModule, 
     HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent, AuthService, AuthGuard]
+  providers: [AuthService,AuthGuard,
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokeninterceptorsService,
+    multi:true
+  }],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

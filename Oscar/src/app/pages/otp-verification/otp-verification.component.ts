@@ -38,7 +38,10 @@ this.apiservice.otpVerification(otpbody).subscribe((data:any)=>
 
 alert(data.message),
 localStorage.setItem('fname', data.data.first_name),
-localStorage.setItem('lnamename', data.data.last_name),
+localStorage.setItem('lname', data.data.last_name),
+localStorage.setItem('token',data.data.access),
+localStorage.setItem('id',data.data.id),
+localStorage.setItem('email',data.data.email),
 this.router.navigate(['dashboard'])
 }
 else{alert(data.message)}

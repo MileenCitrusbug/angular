@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
   submitlogin(data: any) {
 
     // console.log(data)
+    localStorage.setItem('currentpass',data.password)
 
     const loginbody = {
       email: data.email,
