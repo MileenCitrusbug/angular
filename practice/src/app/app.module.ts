@@ -10,7 +10,10 @@ import { ConverterPipe } from './pipes/converter.pipe';
 import { TempformValidationComponent } from './tempform-validation/tempform-validation.component';
 import { ReactiveformValidationComponent } from './reactiveform-validation/reactiveform-validation.component';
 import { ReactiveFormsModule } from'@angular/forms';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { MembersComponent } from './members/members.component';
+import { ErrorComponent } from './error/error.component';
+import { MemberDetailComponent } from './member-detail/member-detail.component'
 
 
 @NgModule({
@@ -22,6 +25,9 @@ import { HomeComponent } from './home/home.component'
     TempformValidationComponent,
     ReactiveformValidationComponent,
     HomeComponent,
+    MembersComponent,
+    ErrorComponent,
+    MemberDetailComponent,
     
   ],
   imports: [

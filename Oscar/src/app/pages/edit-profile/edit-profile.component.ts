@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/API/api.service';
 import { AuthService } from 'src/app/services/auth/auth.service';
@@ -10,36 +10,47 @@ import { AuthService } from 'src/app/services/auth/auth.service';
   styleUrls: ['./edit-profile.component.css']
 })
 export class EditProfileComponent implements OnInit {
-
-  constructor(private apiservice:ApiService , private router:Router ) { }
-  // updateUserForm :FormGroup
-  newpass:any
+ userData:any
+//  updateUserForm:FormGroup
+  constructor(private apiservice:ApiService , private router:Router,userform:FormBuilder ) {}
+ 
+  newpass:any[]=[]
 
   warning= false
   ngOnInit(): void {
+    
+    this.userData=this.apiservice.getUserData() 
+      // this.updateUserForm.patchValue({
+      // fname: this.userData.fname,
+      // lname: this.userData.lname,
+      // email: this.userData.email,
+      // company: this.userData.company,
+      // })}
+ 
+   this.getUserData()
+
+
   }
 
+  updateUserForm = new FormGroup({
 
-updateUserForm = new FormGroup({
-
-  fname : new FormControl(`${localStorage.getItem('fname')}`,[Validators.required]),
-  lname : new FormControl(`${localStorage.getItem('lname')}`,[Validators.required]),
-  email : new FormControl(`${localStorage.getItem('email')}`,[Validators.required]),
-  company : new FormControl(`${localStorage.getItem('company')}`,[Validators.required]),
-  currentPass : new FormControl('',[Validators.required]),
-  newPass : new FormControl('',[]),
-  confirmPass : new FormControl('',[])
-
+    fname : new FormControl(``,[Validators.required]),
+    lname : new FormControl(``,[Validators.required]),
+    email : new FormControl(``,[Validators.required]),
+    company : new FormControl(``,[Validators.required]),
+    currentPass : new FormControl('',[Validators.required]),
+    newPass : new FormControl('',[]),
+    confirmPass : new FormControl('',[])
+  })
 
 
-})
-// getUserData(){
-//   this.updateUserForm.patchValue({
-//   fname: localStorage.getItem('fname'),
-//   lname: localStorage.getItem('lname'),
-//   email: localStorage.getItem('email'),
-//   company: localStorage.getItem('company')
-//   })
+getUserData(){
+  this.updateUserForm.patchValue({
+    fname: this.userData.fname,
+    lname: this.userData.lname,
+    email: this.userData.email,
+    company: this.userData.company,
+    })}
 
 logout(){
   localStorage.clear()
@@ -65,15 +76,18 @@ submitUser(data:any){
 
   this.apiservice.updateUser(detailbody).subscribe((data: any) => {
     console.log(detailbody)
+   
+
+
     if (data.status === true) {
       alert(data.data)
       // alert(data.status)
       this.router.navigate(['dashboard'])
       // console.log(data.data.lname)
       // console.log(data.data.email)
-    localStorage.setItem('lname',data.data.last_name)
-    localStorage.setItem('fname',data.data.first_name)
-    localStorage.setItem('email',data.data.email)
+    // localStorage.setItem('lname',data.data.last_name)
+    // localStorage.setItem('fname',data.data.first_name)
+    // localStorage.setItem('email',data.data.email)
     // localStorage.setItem('currentpass',data.data.currentPass)  
       }
     else { alert(data.message) }

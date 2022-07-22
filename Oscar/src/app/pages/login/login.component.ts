@@ -24,9 +24,9 @@ export class LoginComponent implements OnInit {
 
 
   submitlogin(data: any) {
-
+if(this.loginForm.valid){
     // console.log(data)
-    localStorage.setItem('currentpass',data.password)
+    // localStorage.setItem('currentpass',data.password)
 
     const loginbody = {
       email: data.email,
@@ -41,16 +41,16 @@ export class LoginComponent implements OnInit {
      {
       // console.log(data,"data")
       if (data.status === false) {
-        alert(data.message)
+        // alert(data.message)
         //  localStorage.setItem('userid',data.data.userid),
         //  this.router.navigate(['otp_verification'])
       }
       else {
-        alert(data.message),
+        // alert(data.message),
           localStorage.setItem('userid', data.data.userid),
           this.router.navigate(['otp_verification'])
       }},
-      (err:any) => { alert("Please enter valid Email/Password") }
+      (err:any) => { console.log("Please enter valid Email/Password") }
     
 
 
@@ -62,6 +62,18 @@ export class LoginComponent implements OnInit {
       //     this.router.navigate(['login'])}
       //     else{alert(data.message)}
     )
+  }
+  else{ this.validateFields(this.loginForm)}
+  }
+  validateFields(formgroup:FormGroup){
+    Object.keys(formgroup.controls).forEach(field => {  
+      const control = formgroup.get(field);            
+      if (control instanceof FormControl) {             
+          control.markAsTouched({ onlySelf: true });
+      } else if (control instanceof FormGroup) {        
+          this.validateFields(control);  
+      }
+  });
   }
 
 

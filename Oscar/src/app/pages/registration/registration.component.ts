@@ -28,7 +28,8 @@ export class RegistrationComponent implements OnInit {
 
   submitRegistration(data: any) {
     console.log(data)
-
+  if (this.registrationForm.valid)
+{
     const postbody = {
       email: data.email,
       first_name: data.fname,
@@ -44,14 +45,33 @@ export class RegistrationComponent implements OnInit {
 
     this.apiservice.adduser(postbody).subscribe((data: any) => {
       if (data.status === true) {
-        alert(data.message)
+        // alert(data.message)
         // alert(data.status)
         this.router.navigate(['login'])
       }
-      else { alert(data.message) }
+      
     }
     )
   }
+else{
+
+  this.validateFields(this.registrationForm)
+
+}
+}
+
+
+validateFields(formgroup:FormGroup){
+  Object.keys(formgroup.controls).forEach(field => {  
+    const control = formgroup.get(field);            
+    if (control instanceof FormControl) {             
+        control.markAsTouched({ onlySelf: true });
+    } else if (control instanceof FormGroup) {        
+        this.validateFields(control);  
+    }
+});
+}
+  
 
   get fname() {
     return this.registrationForm.get('fname')

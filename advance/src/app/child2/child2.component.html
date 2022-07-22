@@ -1,0 +1,14 @@
+
+<form #empform="ngForm" (ngSubmit)="updatedata.emit(empform.value)">
+<h4>enter employee name:</h4>
+<input type="text" placeholder="enter employee name" #empname>
+<br><br><br>
+<h4>enter employee email:</h4>
+<input type="email" placeholder="enter employee email" #empemail>
+<br><br><br>
+<h4>enter employee salary:</h4>
+<input type="text" placeholder="enter employee salary" #empsalary>
+<br><br>
+<button>Add employee detail</button>
+
+</form>

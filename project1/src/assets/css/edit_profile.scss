@@ -1,0 +1,152 @@
+.cf_edit_profile_wrapper{
+  position: relative;
+
+  .cf_edit_profile_section{
+    margin-bottom: 24px;
+
+    .cf_edit_profile_form_block{
+
+      label{
+        margin-bottom: 11px;
+        font-family: Product Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #929199;
+      }
+
+      .cf_form_block{
+        max-width: 100%;
+
+        .cf_form_field{
+          // box-shadow: 0px 0px 0px 1px #D6D4DB;
+          // -webkit-box-shadow: 0px 0px 0px 1px #D6D4DB;
+          border-color: #D6D4DB;
+
+          &:focus{
+            // box-shadow: 0px 0px 0px 1px #51AA74;
+            // -webkit-box-shadow: 0px 0px 0px 1px #51AA74;
+            border-color: #51AA74;
+          }
+        }
+      }
+    }
+  }
+  .cf_edit_profile_btn_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 62px;
+
+    .cf_btn_white{
+      margin-right: 24px;
+    }
+  }
+}
+
+.cf_logout_popup_wrapper{
+  text-align: center;
+  padding-bottom: 46px;
+
+  h2{
+    margin-bottom: 16px;
+    font-family: Product Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 48px;
+    color: #252B42;
+  }
+
+  p{
+    max-width: 394px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    font-family: Product Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #919098;
+  }
+  .cf_popup_btn_wrapper{
+    .cf_btn.cf_btn_white{
+      margin-right: 8px;
+    }
+  }
+}
+
+@media (max-width: 820px) and (min-width: 820px){
+
+  .cf_edit_profile_wrapper {
+    .cf_edit_profile_section {
+      .col-md-6{
+        flex: 0 0 auto;
+        width: 100%;
+      }
+    }
+    .cf_edit_profile_btn_wrapper{
+      flex-direction: column;
+      transition: all 0.2s ease-in-out;
+
+      .cf_btn_white{
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) and (min-width: 768px){
+  .cf_dashboard_main_wrapper{
+    &.sidebar_closed_main {
+      .cf_edit_profile_wrapper {
+        .cf_edit_profile_section {
+          .col-md-6{
+            flex: 0 0 auto;
+            width: 50%;
+          }
+        }
+        .cf_edit_profile_btn_wrapper{
+          flex-direction: row;
+
+          .cf_btn_white{
+            margin-right: 24px;
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+  }
+  .cf_edit_profile_wrapper {
+    .cf_edit_profile_section {
+      .col-md-6{
+        flex: 0 0 auto;
+        width: 100%;
+      }
+    }
+    .cf_edit_profile_btn_wrapper{
+      flex-direction: column;
+      transition: all 0.2s ease-in-out;
+
+      .cf_btn_white{
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 580px){
+  .cf_edit_profile_wrapper {
+    .cf_edit_profile_btn_wrapper{
+      flex-direction: column;
+
+      .cf_btn_white{
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

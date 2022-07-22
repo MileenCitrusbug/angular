@@ -1,0 +1,12 @@
+<app-child1 [pdata]="text"></app-child1>
+
+<app-child2  (updatedata)="($event) "></app-child2>
+<br><br><br><br><br>
+<h3>employee name from empdata</h3>
+<app-empname [empname]="empdata"></app-empname>
+
+
+<h3>employee full detail from emp data</h3>
+<app-empdetail [empdetail]="empdata"></app-empdetail>
+
+<router-outlet></router-outlet>

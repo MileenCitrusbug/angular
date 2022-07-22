@@ -12,6 +12,9 @@ export class DashboardComponent implements OnInit {
 
   constructor(private router:Router, private http:HttpClient, private apiservice:ApiService) { }
 
+
+  userdata={"fname":"","lname":"","email":"","company":""}
+
   ngOnInit(): void {
   }
 fname= localStorage.getItem('fname')
@@ -22,12 +25,16 @@ logout(){
 }
 editProfile(){
 
-this.apiservice.getuser().subscribe((data:any) =>{console.log(data.data)
-localStorage.setItem('companyName',data.data.company_name),
-localStorage.setItem('fname',data.data.first_name),
-localStorage.setItem('lname',data.data.last_name),
-localStorage.setItem('email',data.data.email),
-localStorage.setItem('fname',data.data.first_name)
+this.apiservice.getuser().subscribe((data:any) =>{
+  // console.log(data.data)
+
+this.userdata={"fname":data.data.first_name,"lname":data.data.last_name,"email":data.data.email,"company":data.data.company_name}
+  this.apiservice.sendUserData(this.userdata)
+// localStorage.setItem('companyName',data.data.company_name),
+// localStorage.setItem('fname',data.data.first_name),
+// localStorage.setItem('lname',data.data.last_name),
+// localStorage.setItem('email',data.data.email),
+// localStorage.setItem('fname',data.data.first_name)
 
 
 })

@@ -1,0 +1,9 @@
+<h1>This is the list of members</h1>
+
+<div *ngFor="let i of memberdata">
+<li><a href="members/{{i.id}}">{{i.name}}</a></li>
+<br><br>
+</div>
+<button routerLink="memberdetail">member details</button>
+
+<router-outlet></router-outlet>

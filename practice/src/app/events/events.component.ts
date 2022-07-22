@@ -59,7 +59,7 @@ data==='+'?this.black++:this.black--
 let a=this.black/10
 // console.log(a)
 this.style="color: rgba(0, 0, 0,"+a+" );"
-console.log(this.style)
+// console.log(this.style)
 }
 
 toggle(){

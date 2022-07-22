@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+  <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+  <span>
+    <button mat-button routerLink="/">HOME</button>
+    <button mat-button routerLink="/"><mat-icon>home</mat-icon></button>
+  </span>
+  <h1 display-4>Trial App</h1>
+  <!-- <h1 class="md-display-1">Headline</h1> -->
+  
+
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <button mat-button routerLink="/login">
+      <mat-icon routerLink="loginomponant">power_settings_new</mat-icon>
+      Login
+    </button>
+
+
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>exit_to_app</mat-icon>Signup</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="admin/signup" >Admin</button>
+      <button mat-menu-item routerLink="user/signup" >User</button>
+    </mat-menu>
+
+
+   
+    <button mat-button >
+      <mat-icon>exit_to_app</mat-icon>
+      Logout
+    </button>
+        </div>
+  <button mat-button  fxHide="false" fxHide.gt-sm>
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+
+
+
+
+
+
+  
+
+
+
+  <div >
+      <br>
+      <br>
+      
+<!-- 
+<button mat-button>login</button>
+<button mat-button color="primary">Primary</button>
+
+   </div>
+   <button mat-button color="primary">Primary</button> 
+
+
+
+    <h1>admin
+    
+    </h1>
+    <button routerLink="admin/login">Login</button><br>
+    <button routerLink="admin/signup">Signup</button><br>
+    <button routerLink="admin/home">Home</button><br>
+    
+    
+    <br><br><br><br>
+    <h1>user</h1>
+    <button routerLink="user/login">Login</button><br>
+    <button routerLink="user/signup">Signup</button><br>
+    <button routerLink="user/home">Home</button><br>
+    <router-outlet></router-outlet>
+    
+</body>
+
+</html>
+
+ -->
+<router-outlet></router-outlet>

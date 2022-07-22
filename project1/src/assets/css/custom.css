@@ -1,0 +1,36 @@
+.cf_breadcrumb_wrapper.contact_breadcrumb {
+    background: url(../images/contact-bg.png) no-repeat center;
+    background-size: cover;
+    background-position: top center;
+}
+.cf_breadcrumb_wrapper.about_breadcrumb {
+    background: url(../images/about_breadcrumb.png) no-repeat center;
+    background-size: cover;
+    background-position: top center;
+}
+.cf_breadcrumb_wrapper.pricing_breadcrumb {
+    background: url(../images/pricing_breadcrumb.png) no-repeat center;
+    background-size: cover;
+    background-position: top center;
+    border-bottom: 0;
+}
+.cf_contact_wrapper .cf_contactEmail_block h4 span {
+    margin-top: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 18H4V8L12 13L20 8V18ZM12 11L4 6H20L12 11Z' fill='%232E8B57'/%3E%3C/svg%3E%0A");
+    width: 26px;
+    height: 26px;
+    margin-right: 5px;
+    vertical-align: sub;
+}
+.cf_contact_wrapper .cf_contactEmail_block h4 .cf_existing {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.7778 4.0625H4.22222C2.99479 4.0625 2 5.01377 2 6.1875V16.8125C2 17.9862 2.99479 18.9375 4.22222 18.9375H19.7778C21.0052 18.9375 22 17.9862 22 16.8125V6.1875C22 5.01377 21.0035 4.0625 19.7778 4.0625ZM8.11111 7.25C9.33854 7.25 10.3333 8.20127 10.3333 9.375C10.3333 10.5487 9.33854 11.5 8.11111 11.5C6.88368 11.5 5.88889 10.5487 5.88889 9.375C5.88889 8.20127 6.88542 7.25 8.11111 7.25ZM11.4444 15.75H4.77778C4.47083 15.75 4.22222 15.5109 4.22222 15.2188C4.22222 13.7512 5.46597 12.5625 7 12.5625H9.22222C10.7563 12.5625 12 13.7518 12 15.2188C12 15.5109 11.75 15.75 11.4444 15.75ZM19.2222 13.625H14.7778C14.4722 13.625 14.2222 13.3859 14.2222 13.0938C14.2222 12.8016 14.4722 12.5625 14.7778 12.5625H19.2222C19.5278 12.5625 19.7778 12.8016 19.7778 13.0938C19.7778 13.3859 19.5278 13.625 19.2222 13.625ZM19.2222 11.5H14.7778C14.4722 11.5 14.2222 11.2609 14.2222 10.9688C14.2222 10.6766 14.4722 10.4375 14.7778 10.4375H19.2222C19.5278 10.4375 19.7778 10.6766 19.7778 10.9688C19.7778 11.2609 19.5278 11.5 19.2222 11.5ZM19.2222 9.375H14.7778C14.4722 9.375 14.2222 9.13594 14.2222 8.84375C14.2222 8.55156 14.4722 8.3125 14.7778 8.3125H19.2222C19.5278 8.3125 19.7778 8.55156 19.7778 8.84375C19.7778 9.13594 19.5278 9.375 19.2222 9.375Z' fill='%232E8B57'/%3E%3C/svg%3E%0A");
+}
+.cf_contact_wrapper .cf_contactEmail_block h4 .cf_technical {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 7H18V15H20V6.5C20 5.67594 19.325 5 18.5 5H5.5C4.67594 5 4 5.67594 4 6.5V15H6V7ZM21.5 16H2.5C2.22656 16 2 16.2281 2 16.5V17C2 18.1016 2.89844 19 4 19H20C21.1016 19 22 18.1016 22 17V16.5C22 16.2281 21.775 16 21.5 16ZM13.4344 12.9438C13.5562 13.0656 13.7156 13.125 13.875 13.125C14.0344 13.125 14.1947 13.0644 14.3169 12.9424L15.8169 11.4424C16.061 11.1982 16.061 10.8017 15.8169 10.5577L14.3169 9.05769C14.0728 8.81353 13.6772 8.81353 13.4331 9.05769C13.189 9.30184 13.189 9.69831 13.4331 9.94238L14.4913 10.9999L13.4331 12.0574C13.1875 12.3031 13.1875 12.7 13.4344 12.9438ZM10.5656 9.05937C10.3215 8.81522 9.92594 8.81522 9.68188 9.05937L8.18188 10.5594C7.93775 10.8035 7.93775 11.2 8.18188 11.4441L9.68188 12.9441C9.80625 13.0656 9.96563 13.125 10.125 13.125C10.2844 13.125 10.4447 13.0644 10.5669 12.9424C10.811 12.6982 10.811 12.3018 10.5669 12.0577L9.50938 11L10.5675 9.9425C10.7844 9.7 10.7844 9.30312 10.5656 9.05937Z' fill='%232E8B57'/%3E%3C/svg%3E%0A");
+}
+.cf_contact_wrapper .cf_contactEmail_block h4 {
+    font-size: 21px;
+}
+.cf_contact_wrapper .cf_contactEmail_block h5 {
+    padding-left: 35px;
+}

@@ -1,0 +1,15 @@
+.signupbody{
+    /* background-color: aliceblue; */
+    background-size: cover;
+    background-image: url("https://mdbootstrap.com/img/Photos/Others/architecture.webp");
+    background-size: cover;
+
+}
+p{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}

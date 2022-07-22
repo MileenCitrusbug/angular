@@ -1,0 +1,25 @@
+{
+
+  "admin": [
+    {
+      "id": 1,
+      "name": "mileen",
+      "email": "mileen@gmail.com",
+       "password":"mileen@1234"
+    },
+    {
+      "name": "rohan",
+      "email": "rohan@gmail.com",
+      "id": 2,
+      "password":"rohan@1234"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "raj",
+      "email": "raj@gmail.com",
+      "password":"raj@1234"
+    }
+  ]
+}

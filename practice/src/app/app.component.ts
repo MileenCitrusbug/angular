@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MemberdataService } from './service/memberdata.service'
 
 @Component({
   selector: 'app-root',
@@ -19,4 +20,10 @@ export class AppComponent {
     {name:'yash',college:'ldce'},
     {name:'tony',college:'st. zeviasrs'}
   ]
+
+memberdata:any
+constructor(private member:MemberdataService){
+this.memberdata=member.member()
+console.log(this.memberdata)
+}
 }

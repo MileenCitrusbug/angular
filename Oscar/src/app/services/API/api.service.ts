@@ -6,6 +6,11 @@ import {HttpClient} from '@angular/common/http'
 })
 export class ApiService {
   constructor(private http:HttpClient) { }
+
+    userdata={}
+    ud="hey"
+
+
     adduser(body:any){
  
   
@@ -36,4 +41,20 @@ export class ApiService {
   updateUser(body:any){
     return this.http.put(`http://43.204.196.131:9300/api/v1/edit-profile/${localStorage.getItem('id')}/`,body)
   }
+
+  getUserData(){
+    console.log("dataonpage",this.userdata)
+   return this.userdata
+
+  }
+
+  sendUserData(data:any){
+    
+  this.userdata=data
+  console.log("updatedata",this.userdata)  
+  this.getUserData()
+}
+
+
+
 }

@@ -37,7 +37,7 @@
           <span class="cf_icon cf_call" ></span>
           <span style="color: red;" *ngIf="num && num.invalid && num.touched">**number is invalid</span>
         </div>
-        <div class="cf_form_block">
+        <!-- <div class="cf_form_block">
           <select class="cf_form_field">
             <option value="" disabled selected hidden>Company Role</option>
             <option value="Trader">Trader</option>
@@ -54,7 +54,7 @@
             <option value="Option 3">Option 3</option>
           </select>
           <span class="cf_icon cf_down_green"></span>
-        </div>
+        </div> -->
         <div class="cf_form_block">
           <input type="email" placeholder="Email" formControlName="email" class="cf_form_field">
           <span class="cf_icon cf_mail_green"></span>
@@ -65,7 +65,7 @@
         <div class="cf_form_block">
           <input type="password" placeholder="Password" formControlName="password" class="cf_form_field">
           <span class="cf_icon cf_eye_green"></span>
-          <span style="color:red;"  *ngIf="pass && pass.invalid && pass.touched">
+          <span style="color:red;"  *ngIf="pass && pass.invalid && pass.touched && !registrationForm.valid">
             **enter valid password
         </span>
         </div>
@@ -82,6 +82,6 @@
     </div>
   </div>
 
-  <button (click)="setData()"> click to fill filds</button>
+  <button  (click)="setData()"> click to fill filds</button>
 </body>
 </html>

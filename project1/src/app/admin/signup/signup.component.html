@@ -1,0 +1,26 @@
+<div class="signupbody">
+    <p>Signup Here</p>
+    <form [formGroup]="usersignup" (ngSubmit)="subform(usersignup.value)">
+        <input type="text" placeholder="enter name" formControlName="name">
+        <span *ngIf="name && name.invalid && name.touched">
+            **enter valid name
+        </span>
+        <br><br>
+        <input type="email" placeholder="enter email id" formControlName="email">
+        <span *ngIf="email && email.invalid && email.touched">
+            **enter valid email
+        </span>
+        <br><br>
+        <input type="text" placeholder="enter your contact number" formControlName="number">
+        <span *ngIf="num && num.invalid && num.touched">
+            **enter valid number
+        </span>
+        <br><br>
+        <input type="password" placeholder="enter password" formControlName="password">
+        <span *ngIf="pass && pass.invalid && pass.touched">
+            **enter valid password
+        </span>
+        <br><br>
+        <button [disabled]="usersignup.invalid">Submit</button>
+    </form>
+</div>

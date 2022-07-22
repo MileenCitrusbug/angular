@@ -17,12 +17,12 @@ export class OtpVerificationComponent implements OnInit {
   ngOnInit(): void {
   }
  otpForm= new FormGroup({
- otp : new FormControl('',[Validators.required,Validators.pattern('[0-9]')])})
+ otp: new FormControl('',[Validators.required,Validators.pattern('[0-9]+$')])})
 
 
 
  submitOTP(data:any){
-
+if(this.otpForm.valid){
   console.log(data)
 const otpbody =
 {
@@ -36,7 +36,7 @@ this.apiservice.otpVerification(otpbody).subscribe((data:any)=>
 {if (data.status === true){
   console.log(data)
 
-alert(data.message),
+// alert(data.message),
 localStorage.setItem('fname', data.data.first_name),
 localStorage.setItem('lname', data.data.last_name),
 localStorage.setItem('token',data.data.access),
@@ -44,10 +44,21 @@ localStorage.setItem('id',data.data.id),
 localStorage.setItem('email',data.data.email),
 this.router.navigate(['dashboard'])
 }
-else{alert(data.message)}
-},
-err =>
-{alert(err)}
+}
   
 )
-}}
+}else{this.validateFields(this.otpForm)}}
+
+validateFields(formgroup:FormGroup){
+  Object.keys(formgroup.controls).forEach(field => {  
+    const control = formgroup.get(field);            
+    if (control instanceof FormControl) {             
+        control.markAsTouched({ onlySelf: true });
+    } else if (control instanceof FormGroup) {        
+        this.validateFields(control);  
+    }
+});
+}
+
+
+}

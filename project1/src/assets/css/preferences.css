@@ -1,0 +1,168 @@
+.option-btn .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    float: right;
+}
+
+/* Hide default HTML checkbox */
+.option-btn .switch input {display:none;}
+
+/* The slider */
+.option-btn .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.option-btn .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.option-btn input.default:checked + .slider {
+    background-color: #51aa74;
+}
+.option-btn input:focus + .slider {
+box-shadow: 0 0 1px #2196F3;
+}
+.time-op {
+    color: #51aa74;
+    font-size: 17px;
+}
+
+.option-btn input:checked + .slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+}
+
+
+/* Rounded sliders */
+.option-btn .slider.round {
+    border-radius: 34px;
+}
+
+.option-btn .slider.round:before {
+    border-radius: 50%;
+}
+.custom-title-icon {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.custom-title-icon span.cf_icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+.custom-title-icon label {
+    font-size: 21px;
+}
+/* .notification-options:not(:last-child) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+} */
+.notification-options {
+    margin-top: 20px;
+    padding-bottom: 15px;
+    /* border-bottom: 1px dashed #ccc; */
+}
+.option-btn {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+.custom-title-icon .cf_weather {
+    background-image: url(../images/WeatherIcon.png);
+    width: 24px;
+    height: 24px;
+}
+h2.section_heading.preference-title {
+    font-size: 26px;
+}
+p.custom-text {
+    font-size: 17px;
+    color: #777;
+}
+@media (max-width: 820px) and (min-width: 820px) {
+    .cf_edit_profile_wrapper .cf_edit_profile_btn_wrapper .cf_btn_white {
+        margin-right: 20px;
+        margin-bottom: 0px;
+    }
+    .cf_edit_profile_wrapper .cf_edit_profile_btn_wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    h4.custom-header-title.m-0 {
+        margin-right: auto !important;
+    }
+    .cf_edit_profile_wrapper .cf_edit_profile_btn_wrapper {
+        margin-top: 35px;
+    }
+    .option-btn {
+        margin-bottom: 12px;
+        font-size: 18px;
+    }
+    .time-op {
+        color: #51aa74;
+        font-size: 16px;
+    }
+    
+}
+@media (max-width: 767px) {
+    .cf_edit_profile_wrapper .cf_edit_profile_btn_wrapper .cf_btn_white {
+        margin-right: 20px;
+        margin-bottom: 0px;
+    }
+    .cf_edit_profile_wrapper .cf_edit_profile_btn_wrapper .cf_btn {
+        min-width: 110px;
+    }
+    .cf_edit_profile_wrapper .cf_edit_profile_btn_wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+    h4.custom-header-title.m-0 {
+        margin-right: auto !important;
+    }
+    .cf_edit_profile_wrapper .cf_edit_profile_btn_wrapper {
+        margin-top: 35px;
+    }
+    .option-btn .col-sm-2 {
+        position: absolute;
+        top: 3px;
+        right: 0;
+    }
+    .option-btn {
+        position: relative;
+        margin-bottom: 15px;
+    }
+}
