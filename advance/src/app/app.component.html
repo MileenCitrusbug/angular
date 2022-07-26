@@ -1,12 +1,26 @@
-<app-child1 [pdata]="text"></app-child1>
+<!-- <app-child1 [pdata]="text"></app-child1>
 
-<app-child2  (updatedata)="($event) "></app-child2>
+
+<button style="align-items: center;margin-left: 42% ;" mat-raised-button color="primary" (click)="empname()">Employee name</button>
+<button style="align-items: center;margin-left: 2% ;" mat-raised-button color="primary" (click)="empdetail()">Employee detail</button> -->
+
+
+
+<app-child2  (updatedata)="getdata($event) "></app-child2>
 <br><br><br><br><br>
-<h3>employee name from empdata</h3>
+<!-- <h3>employee name from empdata</h3>
 <app-empname [empname]="empdata"></app-empname>
 
 
+
 <h3>employee full detail from emp data</h3>
-<app-empdetail [empdetail]="empdata"></app-empdetail>
+<app-empdetail [empdetail]="empdata"></app-empdetail> -->
+
+
+<h5 *ngFor="let emp of empdata">
+    <ul>
+        <li>{{emp.name}}</li>
+    </ul>
+</h5>
 
 <router-outlet></router-outlet>

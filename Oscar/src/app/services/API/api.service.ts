@@ -43,7 +43,7 @@ export class ApiService {
   }
 
   getUserData(){
-    console.log("dataonpage",this.userdata)
+
    return this.userdata
 
   }
@@ -51,7 +51,6 @@ export class ApiService {
   sendUserData(data:any){
     
   this.userdata=data
-  console.log("updatedata",this.userdata)  
   this.getUserData()
 }
 

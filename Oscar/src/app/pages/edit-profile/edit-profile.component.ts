@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/services/API/api.service';
-import { AuthService } from 'src/app/services/auth/auth.service';
+
 
 @Component({
   selector: 'app-edit-profile',
@@ -10,109 +10,83 @@ import { AuthService } from 'src/app/services/auth/auth.service';
   styleUrls: ['./edit-profile.component.css']
 })
 export class EditProfileComponent implements OnInit {
- userData:any
-//  updateUserForm:FormGroup
-  constructor(private apiservice:ApiService , private router:Router,userform:FormBuilder ) {}
- 
-  newpass:any[]=[]
+  userData: any
+  //  updateUserForm:FormGroup
+  constructor(private apiservice: ApiService, private router: Router, userform: FormBuilder) { }
 
-  warning= false
-  ngOnInit(): void {
-    
-    this.userData=this.apiservice.getUserData() 
-      // this.updateUserForm.patchValue({
-      // fname: this.userData.fname,
-      // lname: this.userData.lname,
-      // email: this.userData.email,
-      // company: this.userData.company,
-      // })}
- 
-   this.getUserData()
-
-
-  }
+  newpass: any
 
   updateUserForm = new FormGroup({
 
-    fname : new FormControl(``,[Validators.required]),
-    lname : new FormControl(``,[Validators.required]),
-    email : new FormControl(``,[Validators.required]),
-    company : new FormControl(``,[Validators.required]),
-    currentPass : new FormControl('',[Validators.required]),
-    newPass : new FormControl('',[]),
-    confirmPass : new FormControl('',[])
+    fname: new FormControl(``, [Validators.required]),
+    lname: new FormControl(``, [Validators.required]),
+    email: new FormControl(``, [Validators.required]),
+    company: new FormControl(``, [Validators.required]),
+    currentPass: new FormControl('', [Validators.required]),
+    newPass: new FormControl('', []),
+    confirmPass: new FormControl('', [])
   })
 
+  warning = false
+  ngOnInit(): void {
 
-getUserData(){
-  this.updateUserForm.patchValue({
-    fname: this.userData.fname,
-    lname: this.userData.lname,
-    email: this.userData.email,
-    company: this.userData.company,
-    })}
+    this.apiservice.getuser().subscribe((data: any) => {
+      // console.log(data.data)
 
-logout(){
-  localStorage.clear()
-  this.router.navigate([''])
-  
+      this.userData = { "fname": data.data.first_name, "lname": data.data.last_name, "email": data.data.email, "company": data.data.company_name }
+      // console.log(this.userData.fname)
+
+      this.updateUserForm.patchValue({
+        fname: data.data.first_name,
+        lname: data.data.last_name,
+        email: data.data.email,
+        company: data.data.company_name,
+      })
+    })
   }
 
-
-
-  
-submitUser(data:any){
-  // console.log(data)
- 
-
-  
-  const detailbody= {
-    first_name: data.fname,
-    last_name: data.lname,
-    company_name: data.company,
-    password: data.newPass,
-    current_password: data.currentPass
+  logout() {
+    localStorage.clear()
+    this.router.navigate([''])
   }
 
-  this.apiservice.updateUser(detailbody).subscribe((data: any) => {
-    console.log(detailbody)
-   
+  submitUser(data: any) {
+    // console.log(data)
+    const detailbody = {
+      first_name: data.fname,
+      last_name: data.lname,
+      company_name: data.company,
+      password: data.newPass,
+      current_password: data.currentPass
+    }
 
-
-    if (data.status === true) {
-      alert(data.data)
-      // alert(data.status)
-      this.router.navigate(['dashboard'])
-      // console.log(data.data.lname)
-      // console.log(data.data.email)
-    // localStorage.setItem('lname',data.data.last_name)
-    // localStorage.setItem('fname',data.data.first_name)
-    // localStorage.setItem('email',data.data.email)
-    // localStorage.setItem('currentpass',data.data.currentPass)  
+    this.apiservice.updateUser(detailbody).subscribe((data: any) => {
+      // console.log(detailbody)
+      if (data.status === true) {
+        // alert(data.data)
+        this.router.navigate(['dashboard'])
       }
-    else { alert(data.message) }
-  })
-}
-
-newpassword(data:any)
-{
-  this.newpass=data
-  this.warning=true
-  // console.log(this.newpass)
-}
-
-
-confpassword(data:any){
-  if(data== this.newpass){
-    // console.log("data")
-    this.warning=false
+    })
   }
-  else{
-    this.warning=true
+
+  newpassword(data: any) {
+    this.newpass = data
+    this.warning = true
+    // console.log(this.newpass)
+  }
+
+
+  confpassword(data: any) {
+    if (data == this.newpass) {
+      this.warning = false
+    }
+    else {
+      this.warning = true
+    }
   }
 }
 
-}
+
 
 
 

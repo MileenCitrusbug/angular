@@ -1,0 +1,38 @@
+<br><br><br><br><br>
+<!-- 
+<mat-horizontal-stepper linear>
+    <mat-step label="Restaurant Name">
+        <p> Restaurant Name</p>
+        <div>
+          
+            <button  style="margin-left: 5px;" mat-raised-button color="primary" matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Restaurant address">
+        <p> Restaurant Address</p>
+        <div>
+            <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+            <button style="margin-left: 5px;" mat-raised-button color="primary" matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Contact number">
+        <p>Contact number</p>
+        <div>
+            <button mat-raised-button color="warn" matStepperPrevious>Back</button>
+    
+        </div>
+    </mat-step>
+</mat-horizontal-stepper> -->
+<br><br>
+<form #regform="ngForm" (ngSubmit)="formdata(regform.value)">
+
+
+    <input type="text" ngModel name="name" placeholder="enter restaurant name">
+    <br><br>
+    <input type="text" ngModel name="address" placeholder="enter address">
+    <br><br>
+    <input type="text" ngModel name="mobile" placeholder="enter mobile number">
+    <br><br>
+ 
+    <button>Add restaurant </button>
+    </form>

@@ -1,13 +1,25 @@
 
-
-
-<h5 *ngFor="let i of empdetail">
-    <ul>
-        <li>{{i.name}}</li>
-        <li>{{i.email}}</li>
-        <li>{{i.salary}}</li>
-    </ul> 
-
-
-</h5>
 <br><br><br><br>
+
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Sr. no.</th>
+    <th scope="col">Name</th>
+    <th scope="col">Email</th>
+    <th scope="col">Salary</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let country of data; index as i">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+     
+      {{ country.name }}
+    </td>
+    <td>{{ country.email  }}</td>
+    <td>${{ country.salary | number }}</td>
+  </tr>
+  </tbody>
+</table>

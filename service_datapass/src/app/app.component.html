@@ -1,0 +1,9 @@
+<h1>Place for restaurant</h1>
+<br><br>
+<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+ <button (click)="add()"> <mat-button-toggle type="button"  id="b1" >Add Restaurant</mat-button-toggle>  </button>
+ <button (click)="detail()"> <mat-button-toggle type="button" id="b2" >List of Restaurant</mat-button-toggle></button>
+</mat-button-toggle-group>
+
+
+<router-outlet></router-outlet>
