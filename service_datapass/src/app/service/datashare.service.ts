@@ -6,7 +6,8 @@ import { Router } from '@angular/router';
 })
 export class DatashareService {
 resData=[
-  {name:'rasial',address:'rajpath-rangoli road, ahmedabad',co_num:7285858505}
+  {name:'rasial',address:'rajpath-rangoli road, ahmedabad',co_num:7285858505},
+  {name:'mircha masala',address:'S.G. highway, ahmedabad',co_num:9898940506}
 ]
   constructor(private rout:Router) { }
 

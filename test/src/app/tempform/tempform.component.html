@@ -1,0 +1,9 @@
+<br><br>
+<h1>template driven form</h1>
+<br><br>
+<form #regform="ngForm" (submit)="regformvalue(regform.value)" >
+   First name: <input type="text" ngModel name="fname" ><br><br>
+   Last name: <input type="text" ngModel name="lname"><br><br>
+   Email: <input name="email" ngModel><br><br>
+   <button>submit</button>
+</form>

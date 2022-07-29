@@ -9,14 +9,14 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let country of data; index as i">
+    <tr *ngFor="let restaurant of data; index as i">
       <th scope="row">{{ i + 1 }}</th>
       <td>
        
-        {{ country.name }}
+        {{ restaurant.name }}
       </td>
-      <td>{{country.address}}</td>
-      <td>{{country.co_num}}</td>
+      <td>{{restaurant.address}}</td>
+      <td>{{restaurant.co_num}}</td>
    
     </tr>
     </tbody>

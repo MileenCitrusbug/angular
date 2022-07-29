@@ -9,14 +9,14 @@ import { NgForm } from '@angular/forms';
 
 
 export class Child2Component implements OnInit {
- @Input () name:any
- @Input () detail:any
+//  @Input () name:any
+//  @Input () detail:any
  @Output () updatedata:EventEmitter<any> =new EventEmitter()
 
  formdetail:any
   constructor() { }
 
-  ngOnInit(): void {this.updatedata.emit
+  ngOnInit(): void {
   }
   formdata(data:NgForm){
   // console.log(data);

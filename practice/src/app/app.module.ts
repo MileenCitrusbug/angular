@@ -13,7 +13,9 @@ import { ReactiveFormsModule } from'@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { MembersComponent } from './members/members.component';
 import { ErrorComponent } from './error/error.component';
-import { MemberDetailComponent } from './member-detail/member-detail.component'
+import { MemberDetailComponent } from './member-detail/member-detail.component';
+import { ReactiveComponent } from './practiceform29/reactive/reactive.component';
+import { TempComponent } from './practiceform29/temp/temp.component'
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { MemberDetailComponent } from './member-detail/member-detail.component'
     MembersComponent,
     ErrorComponent,
     MemberDetailComponent,
+    ReactiveComponent,
+    TempComponent,
     
   ],
   imports: [

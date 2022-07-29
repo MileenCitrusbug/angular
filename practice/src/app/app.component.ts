@@ -8,10 +8,10 @@ import {MemberdataService } from './service/memberdata.service'
 })
 export class AppComponent {
   title = 'practice';
-
+userdata:any
 
   name="mileen"
-  name2="raj"
+  email="xyz@gmail.com"
 
   perentdata=[
     {name:'raj',college:'ljiet'},
@@ -25,5 +25,9 @@ memberdata:any
 constructor(private member:MemberdataService){
 this.memberdata=member.member()
 console.log(this.memberdata)
+}
+
+formdata(data:any){
+  this.userdata=data
 }
 }

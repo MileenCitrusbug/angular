@@ -1,0 +1,12 @@
+<form #tempform="ngForm" (ngSubmit)="formdata(tempform.value)">
+
+
+<input placeholder="{{name}}" ngModel name="name" >
+<br><br>
+<input placeholder="{{email}}" ngModel name="email" > 
+
+<br><br>
+
+
+    <button>submit</button>
+</form>

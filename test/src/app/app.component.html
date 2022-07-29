@@ -1,0 +1,19 @@
+<app-reactiveform (childToPerant)="dataFromChild($event)"  [fname]="fname" [lname]="lname" [email]="email">
+
+</app-reactiveform>
+
+<br><br><br>
+<h1>Part of perent componant</h1>
+<h4 *ngFor="let user of formValue">
+ <ul>
+    <li>  first name:{{user.fname}}</li> 
+    <li>last name: {{user.lname}}</li>
+    <li> email: {{user.email}}</li>
+</ul>
+</h4>
+
+
+
+
+<br><br><br><br>
+<app-tempform (tempformdata)="gettemdata($event)"></app-tempform>

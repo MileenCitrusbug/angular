@@ -1,0 +1,18 @@
+<h1>Reactive form</h1>
+<br>
+
+<form [formGroup]="reactiveForm" (ngSubmit)="getFormval(reactiveForm.value)">
+<h4>First name: <input type="text" formControlName="fname" placeholder="enter first name"></h4>
+<h4>Last name: <input type="text" formControlName="lname" placeholder="enter last name"></h4>
+<h4>Eamil: <input type="text" placeholder="xyz@gmail/outlook.com"  
+     formControlName="email" #email (keyup)="emailcheck(email.value)" ></h4>
+     <div class="form-control-feedback"
+     *ngIf="email.errors&& (email.dirty || email.touched)">
+  <p *ngIf="email.errors.required">Email is required</p>
+  <!-- <p *ngIf="email.errors.pattern">The email address must contain at least the @ character</p> -->
+  <p *ngIf="email.errors.emailDomain">Email must be on the codecraft.tv domain</p> (1)
+</div>
+<!-- <div style="color: red;" *ngIf="email.errors?.emailDomain">**invalid email domain</div> -->
+<!-- <span style="color: red;" *ngIf="emailvalue && emailvalue.error.emailcheck">**email is empty</span> -->
+<button [disabled]="emailvalid">submit</button>
+</form>

@@ -1,0 +1,18 @@
+<form [formGroup]="userform" (ngSubmit)="saveform(userform.value)">
+
+    <h4><input formControlName="name" placeholder="enter name"> <span style="color: red;"
+            *ngIf="(userform.get('name')?.touched || userform.get('name')?.dirty)&& userform.get('name')?.invalid">
+            **name required
+        </span></h4>
+
+    <h4><input formControlName="email" placeholder="enter email"> <span style="color: red;"
+            *ngIf="(userform.get('email')?.touched || userform.get('email')?.dirty) &&userform.get('email')?.invalid">
+            **email required
+        </span></h4>
+    <h4><input formControlName="number" placeholder="enter contact number"> <span style="color: red;"
+            *ngIf="(userform.get('number')?.touched || userform.get('number')?.dirty) && userform.get('number')?.invalid ">
+            **number required
+        </span></h4>
+    <br><br>
+    <button [disabled]="!userform.valid">submit</button>
+</form>
